@@ -16,7 +16,7 @@ function sumArray(arr){
     }
     return sum;
 }
-// console.log("The sum is: " , sum);
+console.log("The sum is: " , sum);
 
 // Take an array of numbers and return the average.
 let average = 0;
@@ -28,8 +28,9 @@ function averageCalc(arr){
     let length = arr.length;
     sum = sumArray(arr);  
     average += sum / length;
+    return average;
 }
-// console.log("The average is:" , average);
+console.log("The average is:" , average);
 
 // Take an array of strings and return the longest string.
 const longerArray = ["Hello", "World", "Hello World"];
@@ -63,7 +64,7 @@ function stringsLongerThan(arr){
 // console.log("The strings longer than ", numberLength , " is " , answerArr)
 
 // Take a number, n, and print every number between 1 and n without using loops. Use recursion.
-const n = 10;
+//const n = 10;
 //recursion(1);
 
 // function recursion(x){
@@ -120,11 +121,17 @@ function changeName(arr){
 // 5. Use the reduce method to calculate the sum of the ages.
 //    Then use the result to calculate the average age.
 
-reduce(info);
-function reduce(arr){
-    const sumAge = arr.reduce((accumlator, arr) => {
-        return accumlator += arr.age;
-    },
-    console.log("The sum age is: " , sumAge)
+reduce(info, sumArray, averageCalc);
+function reduce(age, sumArray, averageCalc){
+    let numArray = age.reduce((arr, age) => {
+        arr.push(age.age);
+        return(arr);
+    }, [])
 
+    let sumAge = numArray.map(Number);
+    let aveAge = numArray.map(Number);
+    sumAge = sumArray(sumAge);
+    aveAge = averageCalc(sumAge);
+    console.log("The sum age is: " , sumAge);
+    console.log("The average age is: " , aveAge);
 }
