@@ -4,21 +4,24 @@
  * 
  */
 
+// 1. Take an array of numbers and return the sum.
 const testArr = [1, 2, 3, 4];
-let sum = 0;
-// Take an array of numbers and return the sum.
-sumArray(testArr);
+
+
+
 
 function sumArray(arr){
-    
+    let sum = 0;
     for (let i = 0; i < arr.length; i++) {
        sum += arr[i]; 
     }
     return sum;
 }
-console.log("The sum is: " , sum);
 
-// Take an array of numbers and return the average.
+console.log("The sum is: " , sumArray(testArr));
+
+
+// 2. Take an array of numbers and return the average.
 let average = 0;
 
 averageCalc(testArr);
@@ -27,7 +30,7 @@ function averageCalc(arr){
     let sum = 0;
     let length = arr.length;
     sum = sumArray(arr);  
-    average += sum / length;
+    average += (sum / length);
     return average;
 }
 console.log("The average is:" , average);
@@ -130,8 +133,7 @@ function reduce(age, sumArray, averageCalc){
 
     let sumAge = numArray.map(Number);
     let aveAge = numArray.map(Number);
-    sumAge = sumArray(sumAge);
-    aveAge = averageCalc(sumAge);
-    console.log("The sum age is: " , sumAge);
-    console.log("The average age is: " , aveAge);
+
+    console.log("The sum age is: " , sumArray(sumAge));
+    console.log("The average age is: " , averageCalc(sumAge));
 }
