@@ -16,7 +16,7 @@ function sumArray(arr){
     }
     return sum;
 }
-console.log("The sum is: " , sum);
+// console.log("The sum is: " , sum);
 
 // Take an array of numbers and return the average.
 let average = 0;
@@ -29,7 +29,7 @@ function averageCalc(arr){
     sum = sumArray(arr);  
     average += sum / length;
 }
-console.log("The average is:" , average);
+// console.log("The average is:" , average);
 
 // Take an array of strings and return the longest string.
 const longerArray = ["Hello", "World", "Hello World"];
@@ -44,7 +44,7 @@ function longestArray(arr){
     }
     return longestString;
 }
-console.log("The longest string is: ",longestString);
+// console.log("The longest string is: ",longestString);
 
 // Take an array of strings, and a number and return an array of the strings that are longer than the given number. 
 // For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3); would return ["hello", "morning"].
@@ -60,7 +60,7 @@ function stringsLongerThan(arr){
         }
     }
 }
-console.log("The strings longer than ", numberLength , " is " , answerArr)
+// console.log("The strings longer than ", numberLength , " is " , answerArr)
 
 // Take a number, n, and print every number between 1 and n without using loops. Use recursion.
 const n = 10;
@@ -87,9 +87,44 @@ const info = [
     { id: "7", name: "Bilbo", occupation: "None", age: "111" }
 ];
 
-sortByAge(info);
+// 1. Sort the array by age.
 
+// sortByAge(info);
 function sortByAge(arr){
     info.sort((a, b) => a.age - b.age);
-    console.log(arr);
+    // console.log(arr);
+}
+
+// 2. Filter the array to remove entries with an age greater than 50.
+
+// removeOver50(info, sortByAge)
+function removeOver50(arr, sortByAge){
+    sortByAge(arr);
+    for (let i = 0; i < arr.length; i++) {
+        arr = arr.filter(arr => arr.age <= 50);
+    }
+    // console.log(arr);
+}
+
+// 3. Map the array to change the “occupation” key to “job” and increment every age by 1.
+
+//changeName(info);
+function changeName(arr){
+    for (let i = 0; i < arr.length; i++) {
+        arr[i].job = arr[i]["occupation"];
+        delete arr[i].occupation;
+    }
+    //console.log(arr);
+}
+
+// 5. Use the reduce method to calculate the sum of the ages.
+//    Then use the result to calculate the average age.
+
+reduce(info);
+function reduce(arr){
+    const sumAge = arr.reduce((accumlator, arr) => {
+        return accumlator += arr.age;
+    },
+    console.log("The sum age is: " , sumAge)
+
 }
