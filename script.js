@@ -7,9 +7,6 @@
 // 1. Take an array of numbers and return the sum.
 const testArr = [1, 2, 3, 4];
 
-
-
-
 function sumArray(arr){
     let sum = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -35,7 +32,7 @@ function averageCalc(arr){
 }
 console.log("The average is:" , average);
 
-// Take an array of strings and return the longest string.
+// 3. Take an array of strings and return the longest string.
 const longerArray = ["Hello", "World", "Hello World"];
 let longestString = "";
 longestArray(longerArray);
@@ -48,9 +45,9 @@ function longestArray(arr){
     }
     return longestString;
 }
-// console.log("The longest string is: ",longestString);
+console.log("The longest string is: ",longestString);
 
-// Take an array of strings, and a number and return an array of the strings that are longer than the given number. 
+// 4. Take an array of strings, and a number and return an array of the strings that are longer than the given number. 
 // For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3); would return ["hello", "morning"].
 let newArr = ['say', 'hello', 'in', 'the', 'morning']
 const numberLength = 3;
@@ -66,7 +63,7 @@ function stringsLongerThan(arr){
 }
 // console.log("The strings longer than ", numberLength , " is " , answerArr)
 
-// Take a number, n, and print every number between 1 and n without using loops. Use recursion.
+// 5. Take a number, n, and print every number between 1 and n without using loops. Use recursion.
 //const n = 10;
 //recursion(1);
 
@@ -96,7 +93,7 @@ const info = [
 // sortByAge(info);
 function sortByAge(arr){
     info.sort((a, b) => a.age - b.age);
-    // console.log(arr);
+    console.log(arr);
 }
 
 // 2. Filter the array to remove entries with an age greater than 50.
@@ -107,7 +104,7 @@ function removeOver50(arr, sortByAge){
     for (let i = 0; i < arr.length; i++) {
         arr = arr.filter(arr => arr.age <= 50);
     }
-    // console.log(arr);
+    console.log(arr);
 }
 
 // 3. Map the array to change the “occupation” key to “job” and increment every age by 1.
