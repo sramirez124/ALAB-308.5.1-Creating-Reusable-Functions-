@@ -134,3 +134,19 @@ function reduce(age, sumArray, averageCalc){
     console.log("The sum age is: " , sumArray(sumAge));
     console.log("The average age is: " , averageCalc(sumAge));
 }
+
+/**
+ * 
+ * Part 3: Thinking Critically
+ * 
+ */
+
+// 1. Take an object and increment its age field.
+
+objectIncrement(arr)
+function objectIncrement(arr){
+    for (let i = 0; i < arr.length; i++) {
+        
+        
+    }
+}
